@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan-bg: hsla(178, 100%, 50%, 0.5);
+  --Cyan: hsl(178, 100%, 50%);
+
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --Space: 2rem;
+  --Border-R: 1.5rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-dark-blue-main-BG);
+}
+
+.card {
+  width: 95%;
+  max-width: 35rem;
+  background-color: var(--Very-dark-blue-card-BG);
+  color: var(--Soft-blue);
+  padding: var(--Space);
+  border-radius: var(--Border-R);
+  display: flex;
+  flex-direction: column;
+  gap: var(--Space);
+}
+
+.card .img-bg {
+  background-image: url(../images/image-equilibrium.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30rem;
+  width: 100%;
+  border-radius: var(--Space);
+}
+
+.img-bg .img-view {
+  width: 100%;
+  background-color: var(--Cyan-bg);
+  height: 100%;
+  display: none;
+  border-radius: var(--Space);
+}
+
+.img-bg:hover .img-view {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coin-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Space);
+  font-weight: 300;
+}
+
+.coin-info h1 {
+  font-size: 2.1rem;
+  color: var(--White);
+}
+
+.coin-info p {
+  font-size: 1.8rem;
+}
+
+.coin-info h1:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+.coin-info .coin-data {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.coin-data .price {
+  font-weight: 500;
+  color: var(--Cyan);
+}
+
+.coin-data div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coin-info::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--Very-dark-blue-line);
+  border-radius: 1rem;
+}
+
+.creator {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.creator .profile-img {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-image: url(../images/image-avatar.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.creator a {
+  text-decoration: none;
+  color: var(--Soft-blue);
+}
+.creator a:hover {
+  color: var(--Cyan);
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: var(--White);
+  text-align: center;
+}
+
+.attribution a{
+    text-decoration: none;
+    color: var(--White);
+}
+.attribution a:hover{
+    color: var(--Cyan);
+}
